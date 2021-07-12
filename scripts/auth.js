@@ -8,6 +8,9 @@ auth
           setupGuides(snapshot.docs)
           setupUI(user)
         })
+        .catch(err => {
+          console.log(err.message)
+        })
     } else {
       setupGuides([])
       setupUI()
