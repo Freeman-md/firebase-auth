@@ -7,9 +7,11 @@ auth
         .get()
         .then(snapshot => {
           setupGuides(snapshot.docs)
+          setupUI(user)
         })
     } else {
       setupGuides([])
+      setupUI()
     }
   })
 
