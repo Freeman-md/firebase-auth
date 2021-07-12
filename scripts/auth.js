@@ -4,8 +4,7 @@ auth
     if (user) {
       db
         .collection('guides')
-        .get()
-        .then(snapshot => {
+        .onSnapshot(snapshot => {
           setupGuides(snapshot.docs)
           setupUI(user)
         })
