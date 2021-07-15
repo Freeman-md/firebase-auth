@@ -7,8 +7,7 @@ auth
         .onSnapshot(snapshot => {
           setupGuides(snapshot.docs)
           setupUI(user)
-        })
-        .catch(err => {
+        }, err => {
           console.log(err.message)
         })
     } else {
@@ -51,6 +50,14 @@ signUpForm.addEventListener('submit', (e) => {
   auth
     .createUserWithEmailAndPassword(email, password)
     .then(cred => {
+      return db
+        .collection('users')
+        .doc(cred.user.uid)
+        .set({
+          bio: signUpForm['signup-bio'].value
+        })
+    })
+    .then(() => {
       const modal = document.querySelector('#modal-signup')
       M.Modal.getInstance(modal).close()
       signUpForm.reset()
