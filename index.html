@@ -11,7 +11,7 @@
 
   <!-- NAVBAR -->
   <nav class="z-depth-0 grey lighten-4">
-    <div class="nav-wrapper container">
+    <div class="container nav-wrapper">
       <a href="#" class="brand-logo">
         <img src="img/logo.svg" style="width: 180px; margin-top: 10px;">
       </a>
@@ -42,18 +42,19 @@
       <h4>Sign up</h4><br />
       <form id="signup-form">
         <div class="input-field">
-          <input type="email" id="signup-email" required />
+          <input type="email" id="signup-email" />
           <label for="signup-email">Email address</label>
         </div>
         <div class="input-field">
-          <input type="password" id="signup-password" required />
+          <input type="password" id="signup-password" />
           <label for="signup-password">Choose password</label>
         </div>
         <div class="input-field">
-          <input type="text" id="signup-bio" required />
+          <input type="text" id="signup-bio" />
           <label for="signup-bio">One Line Bio</label>
         </div>
         <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+        <p class="error pink-text white center-align"></p>
       </form>
     </div>
   </div>
@@ -64,14 +65,15 @@
       <h4>Login</h4><br />
       <form id="login-form">
         <div class="input-field">
-          <input type="email" id="login-email" required />
+          <input type="email" id="login-email" />
           <label for="login-email">Email address</label>
         </div>
         <div class="input-field">
-          <input type="password" id="login-password" required />
+          <input type="password" id="login-password" />
           <label for="login-password">Your password</label>
         </div>
         <button class="btn yellow darken-2 z-depth-0">Login</button>
+        <p class="error white pink-text center-align"></p>
       </form>
     </div>
   </div>
